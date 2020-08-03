@@ -1,0 +1,283 @@
+
+/*login-registration section*/
+.bg{
+
+  background-repeat: no-repeat;
+   width:100%;
+  height: 150vh;
+  background-size: cover;
+}
+.form-container{
+  background-color: rgb(255, 228, 196,0.6);
+  border: 0px solid #fff;
+  padding: 40px 50px;
+  margin-top: 20vh;
+  box-shadow: -1px 1px 18px 8px rgba(0,0,0,0.75);
+  font-weight: bold;
+}
+
+/*our service section*/
+
+.ser{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(image/bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  color:#fff!important;
+  background-repeat: no-repeat;
+  width:100%;
+ height: 150vh;
+}
+.service{
+  margin: 90px auto;
+  text-align: center;
+}
+
+.service h1{
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.service h1::after{
+  content: '';
+  background: white;
+  display: block;
+  width: 150px;
+  margin:10px auto;
+  height: 3px;
+}
+
+.icon{
+  font-size: 40px;
+  margin: 5px auto;
+  padding: 5px;
+  height: 60px;
+  width: 60px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.tx:hover{
+  box-shadow: 5px 7px 9px -3px rgba(255, 255, 255, 0.5);
+  cursor:pointer;
+}
+
+
+
+
+
+/*product section*/
+.pro{
+  background-color: Beige;
+  font-family: sans-serif;
+}
+
+.pro1{
+  height: 57px;
+  top: 0;
+  position: sticky;
+  background: #fff;
+  margin-bottom: 20px;
+  border-bottom: 3px solid orange;
+  z-index: 2;
+}
+
+.pro1 p{
+  height: 0;
+  margin: 5px 10px;
+}
+
+.pro3{
+  margin-top: 9px;
+  margin-left: 30px !important;
+  border: 1px solid orange !important;
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.pro4{
+  background: CadetBlue !important;
+  margin:8.5px 10px 3px !important ;
+  border: 1px solid orange !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 20 !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 20 !important;
+  cursor: pointer;
+}
+
+.pro4:hover{
+  cursor:pointer;
+  background-color: DarkSlateBlue !important;
+}
+
+.pro2{
+
+  display: inline-flex;
+  width: 60%;
+}
+
+
+.fa{
+  color: white;
+}
+
+
+.menu{
+  height: 47px;
+  width: 40%;
+  float: right;
+}
+
+.menu ul{
+  display: inline-flex;
+  float: right;
+}
+
+.menu ul li{
+  border-left: 1px solid white;
+  list-style-type: none;
+  padding:15px 25px;
+  text-align: center;
+  background-color: CadetBlue;
+  cursor: pointer;
+}
+
+.menu ul li a{
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu ul li:hover{
+
+  cursor:pointer;
+  background-color: DarkSlateBlue;
+}
+
+@media only screen and (max-width:980px) {
+    .pro1{
+      height: 118px;
+      border-bottom: 0;
+    }
+    .pro2{
+      width:100%;
+
+    }
+    .menu{
+      width: 100%;
+
+    }
+    .menu ul{
+      margin: 10px 0;
+      width: 100%;
+    }
+    .manu ul li{
+      height:57px;
+      width:100%;
+    }
+}
+
+/*...sidemenu...*/
+
+.sm{
+  height:500px;
+  color: DarkGreen;
+  width:15%;
+  font-size: 14px;
+   float: left;
+   z-index: 2;
+   background-color: PaleGoldenRod;
+   margin-left: -20px;
+}
+
+.sm ul{
+  margin-left: 0;
+
+}
+.sm li{
+  list-style-type: none;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+
+}
+.sm ul li:hover{
+  color: black;
+}
+
+.sm ul li ul{
+  display: none;
+  z-index: 10; /*for overlap*/
+  top: 77px;
+}
+
+.sm ul li:hover ul{
+  color: black;
+  display: block;
+  height: 400px;
+  margin-left: 12%;
+  padding: 0 90px 10px 10px;
+  position: fixed;
+  background: WhiteSmoke;
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+.m{
+  margin-top: 4px;
+  margin-right: 8px;
+  float: right;
+}
+#menu-btn-bt,#close-btn-bt{
+  font-size: 30px;
+  margin: 10px;
+
+
+}
+#menu-btn-bt{
+  display: none;
+}
+
+
+
+@media only screen and (max-width:980px){
+  .sm{
+    width:150px;
+    z-index: 20;
+    top: 133px;
+    font-size: 10px;
+    display: none;
+  }
+.sm li{
+  margin: 5px 0;
+  width: 100%;
+}
+
+  .sm ul li ul{
+    top: 133px;
+  }
+  .sm ul li:hover ul{
+    height:300px;
+    margin-left: 24%;
+  }
+  #menu-btn-bt{
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*......*/
