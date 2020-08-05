@@ -1,3 +1,57 @@
+<?php
+
+
+if(isset($_POST["submit"])){
+
+if(!empty($_POST['uname']) && !empty($_POST['pwd'])) {
+    $user=$_POST['uname'];
+    $pass=$_POST['pwd'];
+
+
+    $con = mysqli_connect('localhost','root','','registration') or die("could not connect db");
+
+    $query=mysqli_query($con, "SELECT * FROM user WHERE username='".$user."' AND password='".$pass."'");
+    $numrows=mysqli_num_rows( $query);
+    if($numrows!=0)
+    {
+    while($row=mysqli_fetch_assoc($query))
+    {
+    $dbusername=$row['username'];
+    $dbpassword=$row['password'];
+    }
+
+    if($user == $dbusername && $pass == $dbpassword)
+    {
+    session_start();
+    $_SESSION['uname']=$user;
+
+    /* Redirect browser */
+    header("Location: service.php");
+    }
+    }
+     else {
+    echo "Invalid username or password!";
+    }
+
+} else {
+    echo "All fields are required!";
+}
+}
+
+
+
+
+
+
+
+
+ ?>
+
+
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -60,7 +114,7 @@ function test_input($data) {
                    <input class="form-check-input" type="checkbox"> Remember me
                  </label>
                </div>
-               <input type="submit" class="btn btn-primary btn-block" name="submit" value="submit"> </input>
+               <input type="submit" class="btn btn-primary btn-block" name="submit" value="submit" ><a href="service.php"></a> </input>
               </form>
               <p style="color:white"><b><i>Not yet a MEmber?... <a href="registration.php">Registration</a></i></b></p>
            </div>
