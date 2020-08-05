@@ -1,7 +1,12 @@
 <?php
+session_start();
 
 
 if(isset($_POST["submit"])){
+
+  $_SESSION["uname"] = $_POST["uname"];
+  $_SESSION['last_login_timestamp'] = time();
+
 
 if(!empty($_POST['uname']) && !empty($_POST['pwd'])) {
     $user=$_POST['uname'];

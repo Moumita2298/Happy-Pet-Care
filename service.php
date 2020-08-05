@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -15,6 +17,28 @@
 
   </head>
   <body class="ser" >
+
+    <?php
+          session_start();
+          if(isset($_SESSION["uname"]))
+          {
+               if((time() - $_SESSION['last_login_timestamp']) > 60) // 900 = 15 * 60
+               {
+                    header("location:logout.php");
+               }
+               else
+               {
+                    $_SESSION['last_login_timestamp'] = time();
+                    
+                    echo "<p align='center'><a href='logout.php'>Logout</a></p>";
+               }
+          }
+          else
+          {
+               header('location:login.php');
+          }
+          ?>
+
     <div class="container sc" >
       <div class="service">
         <h1>Our Service</h1>
