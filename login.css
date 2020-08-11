@@ -195,7 +195,7 @@
 
 .sm ul{
   margin-left: 0;
-
+cursor: pointer;
 }
 .sm li{
   list-style-type: none;
@@ -236,10 +236,6 @@
 
 
 }
-#menu-btn-bt{
-  display: none;
-}
-
 
 
 @media only screen and (max-width:980px){
@@ -265,12 +261,42 @@
   #menu-btn-bt{
     display: block;
   }
+
+}
+
+
+
+/*--------slide--------*/
+
+.slider{
+  width:85%;
+   margin-left:180px;
+    padding: 0 5px;
+     height:500px;
+}
+.carousel{
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+}
+.carousel-inner{
+  z-index: 2 !important;
+}
+@media only screen and (max-width:980px){
+  .slider{
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 
 
 
 
+
+
+
+
+
+/*...slider...*/
 
 
 
