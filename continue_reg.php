@@ -12,10 +12,27 @@ if ($pwd != $cpwd)  {array_push($errors,"Password doesn't match");}
 
 
 
-//$password = md5($pwd);  /*md5 version algorithm*/
+
 $query = "INSERT INTO  user (username, email ,password) VALUES ('$username','$email','$password')";/*setup query*/
 mysqli_query($con , $query );
 $_SESSION['uname'] = $username;
 header("Location:login.php");
+
+/*check existing username
+
+$user_check_query = "SELECT * From user Where uname = '$username' or email= '$email' LIMIT 1";
+$result = mysqli_query($db,$user_check_query);
+$user = mysqli_fetch_assoc($result);
+
+if($user['uname']== $username){
+  array_push($errors, "username is Already exist");
+}
+
+if($user['email']== $email){
+  array_push($errors, "email is Already exist");
+}*/
+
+
+
 
 ?>

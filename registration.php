@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -22,11 +24,7 @@
        <div class="col-sm " >
          <form class="form-container" action="continue_reg.php" method="post">
 
-           <?php
-           if (null != isset($_GET['error'])) {
-                     echo '<p class="text-danger">Wrong email or password.</p>';
-                   }
-            ?>
+
            <div id="legend">
              <legend class="">Registration</legend>
            </div>

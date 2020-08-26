@@ -31,7 +31,7 @@ if(!empty($_POST['uname']) && !empty($_POST['pwd'])) {
     $_SESSION['uname']=$user;
 
     /* Redirect browser */
-    header("Location: service.php");
+    header("Location: index.php");
     }
     }
      else {
@@ -42,12 +42,6 @@ if(!empty($_POST['uname']) && !empty($_POST['pwd'])) {
     echo "All fields are required!";
 }
 }
-
-
-
-
-
-
 
 
  ?>
@@ -119,7 +113,7 @@ function test_input($data) {
                    <input class="form-check-input" type="checkbox"> Remember me
                  </label>
                </div>
-               <input type="submit" class="btn btn-primary btn-block" name="submit" value="submit" ><a href="service.php"></a> </input>
+               <input type="submit" class="btn btn-primary btn-block" name="submit" value="submit" ><a href="index.php"></a> </input>
               </form>
               <p style="color:white"><b><i>Not yet a MEmber?... <a href="registration.php">Registration</a></i></b></p>
            </div>

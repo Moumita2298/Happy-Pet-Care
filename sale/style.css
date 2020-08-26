@@ -1,71 +1,3 @@
-
-/*login-registration section*/
-.bg{
-
-  background-repeat: no-repeat;
-   width:100%;
-  height: 150vh;
-  background-size: cover;
-}
-.form-container{
-  background-color: rgb(255, 228, 196,0.6);
-  border: 0px solid #fff;
-  padding: 40px 50px;
-  margin-top: 20vh;
-  box-shadow: -1px 1px 18px 8px rgba(0,0,0,0.75);
-  font-weight: bold;
-}
-
-/*our service section*/
-
-.ser{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(image/bg2.jpg);
-  background-size: cover;
-  background-position: center;
-  color:#fff!important;
-  background-repeat: no-repeat;
-  width:100%;
- height: 150vh;
-}
-.service{
-  margin: 90px auto;
-  text-align: center;
-}
-
-.service h1{
-  font-family: sans-serif;
-  letter-spacing: 1px;
-}
-
-.service h1::after{
-  content: '';
-  background: white;
-  display: block;
-  width: 150px;
-  margin:10px auto;
-  height: 3px;
-}
-
-.icon{
-  font-size: 40px;
-  margin: 5px auto;
-  padding: 5px;
-  height: 60px;
-  width: 60px;
-  border: 1px solid white;
-  border-radius: 50%;
-}
-
-.tx:hover{
-  box-shadow: 5px 7px 9px -3px rgba(255, 255, 255, 0.5);
-  cursor:pointer;
-}
-
-
-
-
-
-/*product section*/
 .pro{
   background-color: Beige;
   font-family: sans-serif;
@@ -77,7 +9,7 @@
   position: sticky;
   background: #fff;
   margin-bottom: 20px;
-  border-bottom: 3px solid orange;
+  border-bottom: 3px solid navyblue;
   z-index: 2;
 }
 
@@ -140,14 +72,14 @@
   list-style-type: none;
   padding:15px 25px;
   text-align: center;
-  background-color: CadetBlue;
+  background-color: darkmagenta;
   cursor: pointer;
 }
 
 .menu ul li a{
-  color: white;
+  color: ghostwhite;
   font-size: 16px;
-  font-weight: bold;
+  
   text-decoration: none;
 }
 
@@ -189,7 +121,7 @@
   font-size: 14px;
    float: left;
    z-index: 2;
-   background-color: PaleGoldenRod;
+   background-color: lightgray;
    margin-left: -20px;
 }
 
@@ -307,3 +239,38 @@ cursor: pointer;
 
 
 /*......*/
+footer{
+   position: relative;
+    padding: 100px 0px;
+    text-align: center;
+    margin-top: -150px;
+    
+}
+.img6{
+     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),url(..//image/footer-background-img.png);
+  background-size: cover;
+  background-position: center;
+  color:#fff!important;
+  background-repeat: no-repeat;
+  width:100%;
+ height: 30vh;
+    
+}
+.team-social-network{
+    text-align: center;
+    padding-bottom: 15px;
+}
+.team-social-network a{
+    margin: 0 6px;
+}
+.team-social-network i{
+    height: 40px;
+    width: 40px;
+    background: white;
+    text-align: center;
+    color: darkgrey;
+    border-radius: 50%;
+    border: 3px solid darkgrey;
+    padding-top: 10px;
+}
+
